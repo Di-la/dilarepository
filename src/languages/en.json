@@ -1,0 +1,24 @@
+{
+    "info":{
+        "name": "English",
+        "code": "en"
+    },
+    "search": "Search",
+    "home": "Home",
+    "production":"PRODUCTION",
+    "humanresource":"HUMAN RESOURCE",
+    "sales":"SALES",
+    "development":"RESEARCH AND DEVELOPMENT",
+    "marketing":"MARKETING",
+    "accounting":"ACCOUNTING AND FINANCE",
+    "floor":"FLOOR:",
+    "head":"HEAD:",
+    "show":"SHOW",
+    "name":"Name",
+    "lastname":"Lastname",
+    "department":"Department",
+    "position":"Position",
+    "mail":"E-mail",
+    "degree": "Degree",
+    "back":"Previous Page"
+}

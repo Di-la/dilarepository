@@ -1,0 +1,25 @@
+{
+    "info":{
+        "name": "Türkçe",
+        "code": "tr"
+    },
+    "search": "Arama",
+    "home": "Anasayfa",
+    "production":"ÜRETİM",
+    "humanresource":"İNSAN KAYNAKLARI",
+    "sales":"SATIŞ",
+    "development":"ARAŞTIRMA VE GELİŞTİRME",
+    "marketing":"PAZARLAMA",
+    "accounting":"MUHASEBE VE FİNANS",
+    "floor":"KAT:",
+    "head":"MÜDÜR:",
+    "show":"GÖRÜNTÜLE",
+    "name":"Ad",
+    "lastname":"Soyad",
+    "department":"Departman",
+    "position":"Pozisyon",
+    "mail":"E-posta",
+    "degree": "Diploma",
+    "back":"Önceki Sayfa"
+
+}
