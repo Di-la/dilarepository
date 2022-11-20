@@ -23,17 +23,22 @@ export default {
       console.log(response);
       let data = response.data;
       for (let key in data) {
-          let pers = [{name:'',lastname:''}];
-          
-          axios.get("http://localhost:3000/persons/"+data[key].Head).then((resp) => {
+        let pers = [{ name: "", lastname: "" }];
+
+        axios
+          .get("http://localhost:3000/persons/" + data[key].Head)
+          .then((resp) => {
             pers = resp.data;
             //console.log(pers[0])
-            this.departments.push({ ...data[key], Head: `${pers[0].name} ${pers[0].lastname}` });
-          }).catch(err => {
+            this.departments.push({
+              ...data[key],
+              Head: `${pers[0].name} ${pers[0].lastname}`,
+            });
+          })
+          .catch((err) => {
             console.log(err);
             this.departments.push({ ...data[key], Head: `- Yok -` });
           });
-        
       }
     });
     //.catch((e) => console.log(e));
@@ -41,6 +46,7 @@ export default {
   components: {
     department: DepcomponentVue,
   },
+
   data() {
     return {
       departments: [],

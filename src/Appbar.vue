@@ -1,55 +1,52 @@
 <template>
-    <v-app-bar
-      app
-      height="140"
-      :style="'background-color:' + (this.theme ? '#333' : '#fff') + ';'"
-    >
-      <v-row justify="space-between">
-        <v-col cols="5">
-          <div class="d-flex flex-column justify-between">
-            <img class="img" @click="navigateToHome"
-              style="padding: 10px 0"
-              width="200"
-              src=".\assets\trex_color.svg"
-            />
-            <span class="blue-grey--text">Trex Rehber</span>
+  <v-app-bar
+    app
+    height="140"
+    :style="'background-color:' + (this.theme ? '#333' : '#fff') + ';'"
+  >
+    <v-row justify="space-between">
+      <v-col cols="5">
+        <div class="d-flex flex-column justify-between">
+          <img
+            class="img"
+            @click="navigateToHome"
+            style="padding: 10px 0"
+            width="200"
+            src=".\assets\trex_color.svg"
+          />
+          <span class="blue-grey--text">Trex Rehber</span>
+        </div>
+      </v-col>
+      <searchbar></searchbar>
+      <v-col cols="auto">
+        <div class="d-flex flex-column align-end">
+          <div style="padding: 5px 0; font-size: 13px">
+            <button @click="navigateToHome">
+              <icon size="14px" name="home-fill" color="darkorange" />
+              {{ $t("home") }}
+            </button>
+            <v-spacer></v-spacer>
+
+            <button class="ml-4" @click="toggleLang()">
+              {{ $i18n.locale == "tr" ? "EN" : "TR" }}
+            </button>
           </div>
-        </v-col>
-        <searchbar></searchbar>
-        <v-col cols="auto">
-          <div class="d-flex flex-column align-end">
-            <div style="padding: 5px 0; font-size: 13px">
-              <button @click="navigateToHome">
-                <icon size="14px" name="home-fill" color="darkorange" />
-                {{ $t("home") }}
-              </button>
-               <v-spacer></v-spacer>
-
-              <button @click="goBack">
-                <icon size="14px" name="home-fill" color="darkorange" />
-                {{ $t("back") }}
-              </button>
-
-              <button class="ml-4" @click="toggleLang()">
-                {{ $i18n.locale == "tr" ? "EN" : "TR" }}
-              </button>
-            </div>
-            <!-- <input
+          <!-- <input
               class="search-input"
               v-model="search"
               type="text"
               :placeholder="$t('search')"
             /> -->
-          </div>
-        </v-col>
-      </v-row>
-    </v-app-bar>
+        </div>
+      </v-col>
+    </v-row>
+  </v-app-bar>
 </template>
 <script>
 import Search from "./Search.vue";
 export default {
   components: {
-     searchbar:Search,
+    searchbar: Search,
   },
   data() {
     return {
@@ -63,8 +60,8 @@ export default {
     navigateToHome() {
       this.$router.push({ path: "/" });
     },
-    goBack(){
-this.$router.go(-1);
+    goBack() {
+      this.$router.go(-1);
     },
     toggleLang() {
       //console.log(this.$i18n.locale);
@@ -92,8 +89,7 @@ this.$router.go(-1);
   right: 10;
   top: 60px;
 }
-.img{
+.img {
   cursor: pointer;
 }
-
 </style>

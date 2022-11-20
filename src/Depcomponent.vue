@@ -5,7 +5,7 @@
                 <div  >
                  <v-card :color="color" dark flat rounded="50px"
                   ><v-card-title class="text-h5">
-                    {{title}}
+                   {{title}} 
                   </v-card-title>
                   <v-card-subtitle>{{ $t("head") }} {{head}}  </v-card-subtitle>
                   <v-card-subtitle>{{ $t("floor") }} {{floor}}</v-card-subtitle>
